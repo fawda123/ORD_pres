@@ -90,6 +90,8 @@ theme_set(theme_mine())
 
 \newcommand{\Bigtxt}[1]{\textbf{\textit{#1}}}
 
+\setbeamertemplate{enumerate items}[circle]
+
 \begin{document}
 
 \title[SWMPr for estuarine time series]{\includegraphics[width=0.85\textwidth]{fig/swmpr_logo.png}}
@@ -109,12 +111,11 @@ theme_set(theme_mine())
 
 %%%%%%
 \begin{frame}{Overview}
-A mixture of things...\\~\\
 \begin{itemize}
 \item What is NERRS/SWMP and motivation for creating the package \\~\\
-\item What SWMPr is not \\~\\
 \item What can SWMPr do \\~\\
 \item What has SWMPr done \\~\\
+\item How I can help, questions for the group
 \end{itemize}
 \end{frame}
 
@@ -161,12 +162,12 @@ Data maintained by the Centralized Data Management Office (\href{http://cdmo.bar
 \end{frame}
 
 %%%%%%
-\begin{frame}[t]{What is NERRS/SWMP?}
-CDMO has several services for processing/obtaining data\\~\\
+\begin{frame}{What is NERRS/SWMP?}
+CDMO is an existing data management infrastructure for SWMP, services include:\\~\\
 \begin{itemize}
 \item Automated QAQC \\~\\
 \item Numerous data download options \\~\\
-\item Web services/API for data retrieval \\~\\
+\item Web services/API for remote data retrieval \\~\\
 \item Simple viz tools \\~\\
 \end{itemize}
 \end{frame}
@@ -188,6 +189,7 @@ Some specific issues:\\~\\
 \item Dealing with QAQC columns or removing `bad' observations
 \item Combining data for comparison
 \item Issues inherent with time series, e.g., signal vs. noise, data quantity
+\item ...and analysis
 \end{itemize}
 \end{frame}
 
@@ -197,130 +199,87 @@ Some specific issues:\\~\\
 \begin{frame}[fragile]{What is the (potential) solution?}
 \centerline{\includegraphics[width = 0.8\textwidth]{fig/swmpr_logo.png}}
 \vspace{0.15in}
-SWMPr v2.0.0 is now available on \href{http://cran.r-project.org/web/packages/SWMPr/index.html}{CRAN}!
+SWMPr v2.0.0 is officially released!
 <<eval = F>>=
 install.packages('SWMPr')
 library(SWMPR)
 @
-Currently no vignette, but working on a manuscript
+Still in development, currently on v2.0.5
 \end{frame}
 
 %%%%%%
-\begin{frame}{What SWMPr is not}
-SWMPr was developed for a specific purpose, meant to \Bigtxt{augment} existing SWMP data collection/processing methods \\~\\
+\begin{frame}[fragile]{SWMPr is fully documented}
+\centerline{\includegraphics[width = 0.75\textwidth]{fig/swmpr_manual.png}}
+\end{frame}
+
+%%%%%%
+\begin{frame}[fragile]{SWMPr is fully documented}
+\centerline{\includegraphics[width = 0.75\textwidth]{fig/help_ex.png}}
 \end{frame}
 
 %%%%%%
 \begin{frame}[t]{What can SWMPr do?}
-SWMPr functions are grouped into three categories that describe their use in the `data workflow' \\~\\
+SWMPr functions are grouped into three categories that describe their use in the `data workflow'
+\begin{center}
+\begin{tikzpicture}[node distance=2.5cm, auto, >=stealth]
+	\node[block] (a) {\Bigtxt{1) Retrieve}};
+	\node[block] (b)  [right of=a, node distance=4.2cm] {\Bigtxt{2) Organize}};
+ 	\draw[->] (a) -- (b);
+ 	\node[block] (c)  [right of=b, node distance=4.2cm]  {\Bigtxt{3) Analyze}};
+ 	\draw[->] (b) -- (c);
+\end{tikzpicture}
+\end{center}
 \begin{columns}[t]
 \begin{column}{0.3\textwidth}
-\Bigtxt{Retrieve}\\~\\
 \small{
-\texttt{all\_params}\\
-\texttt{all\_params_dtrng}\\
-\texttt{import\_local}\\
-\texttt{import\_remote}\\
-\texttt{single\_param}\\
-\texttt{site\_codes}\\
-\texttt{site\_codes\_ind}
+\begin{itemize}
+\item Retrieve metadata \\~\\
+\item Import from CDMO into R
+\end{itemize}
 }
 \end{column}
 \begin{column}{0.3\textwidth}
-\Bigtxt{Organize}\\~\\
 \small{
-\texttt{comb}\\
-\texttt{qaqc}\\
-\texttt{qaqcchk}\\
-\texttt{rem\_reps}\\
-\texttt{setstep}\\
-\texttt{subset}\\
+\begin{itemize}
+\item Manipulate data for analysis \\~\\
+\item Functions to clean, combine, change time step, etc.
+\end{itemize}
 }
 \end{column}
 \begin{column}{0.3\textwidth}
-\Bigtxt{Analyze}\\~\\
 \small{
-\texttt{aggreswmp}\\
-\texttt{aggremetab}\\
-\texttt{ecometab}\\
-\texttt{decomp}\\
-\texttt{decomp\_cj}\\
-\texttt{hist}\\
-\texttt{lines}\\
-\texttt{na.approx}\\
-\texttt{plot}\\
-\texttt{plot\_metab}\\
-\texttt{plot\_summary}\\
-\texttt{smoother}\\
+\begin{itemize}
+\item Generic to specific applications\\~\\
+\item Visualization and graphics
+\end{itemize}
 }
 \end{column}
 \end{columns}
 \end{frame}
 
 %%%%%%
+\begin{frame}[fragile]{What can SWMPr do?}
+Function types are searchable in R:
+<<eval = F>>=
+help.search('analyze', package = 'SWMPr')
+@
+\centerline{\fbox{\includegraphics[width = 0.6\textwidth]{fig/searches.png}}}
+\end{frame}
+
+%%%%%%
 \begin{frame}{How are data \Bigtxt{retrieved}?}
-The first challenge is to determine the station, parameter, and date range of interest - Check the available data on the CDMO website \\~\\
-Also familiarize yourself with the NERRS/SWMP naming convention\\~\\  
-\Bigtxt{Site} (reserve), \Bigtxt{station}, and \Bigtxt{parameter type} are identified by a 7 or 8 character name \\~\\
-E.g., elkcwmet \\~\\
-\begin{itemize}
-\item elk: site, Elkhorn Slough
-\item cw: station, Caspian Weather Station
-\item met: parameter type (weather)
-\end{itemize}
-\end{frame}
-
-%%%%%%
-\begin{frame}[t]{How are data \Bigtxt{retrieved}?}
-SWMP data can be imported from CDMO into R three ways\\~\\
-1) From a local path: \texttt{import\_local} \\~\\
-Advantages: \\~\\
-\begin{itemize}
-\item Ideal for large datasets
-\item Most recent data \\~\\
-\end{itemize}
-Disadvantages: \\~\\
-\begin{itemize}
-\item Outside of R
-\item Only works for one type of data request from CDMO
-\end{itemize}
-\end{frame}
-
-%%%%%%
-\begin{frame}[t]{How are data \Bigtxt{retrieved}?}
-SWMP data can be imported from CDMO into R three ways\\~\\
-2) retrieve SWMP data from a \href{https://s3.amazonaws.com/swmpalldata/}{third-party server}: \texttt{import\_remote} \\~\\
-Advantages:\\~\\
-\begin{itemize}
-\item Fast import!
-\item No requests to CDMO\\~\\
-\end{itemize}
-Disadvantages:\\~\\
-\begin{itemize}
-\item Data are not current
-\item Data have already been minimally processed
-\end{itemize}
-\end{frame}
-
-%%%%%%
-\begin{frame}[t]{How are data \Bigtxt{retrieved}?}
-SWMP data can be imported from CDMO into R three ways\\~\\
-3) Use the existing CDMO \href{http://cdmo.baruch.sc.edu/webservices.cfm}{web services} to import directly:  \texttt{single\_param}, \texttt{all\_params}, \texttt{all\_params\_dtrng} \\~\\
-Advantages: \\~\\
-\begin{itemize}
-\item Data will always be current
-\item Customized requests\\~\\
-\end{itemize}
-Disadvantages:\\~\\
-\begin{itemize}
-\item IP address must be registered
-\item Lengthy download times - servers are rate-limited
-\end{itemize}
+SWMPr functions can be used to import data into R three ways\\~\\
+\begin{enumerate}
+\item Import from a local path \\~\\
+\item Retrieve SWMP data from a \href{https://s3.amazonaws.com/swmpalldata/}{third-party server} \\~\\
+\item Call the existing CDMO \href{http://cdmo.baruch.sc.edu/webservices.cfm}{web services} to import directly\\~\\
+\end{enumerate}
+Multiple options to accommodate different types of users
 \end{frame}
 
 %%%%%%
 \begin{frame}[fragile,t,shrink]{How are data \Bigtxt{retrieved}?}
-The end result is the same - data are imported as a \texttt{swmpr} S3 object
+The end result is the same - data are imported as a \texttt{swmpr} data object
 <<size = 'small'>>=
 dat <- import_remote('kacsswq')
 class(dat)
@@ -335,54 +294,72 @@ The remaining functions have \texttt{swmpr} methods
 <<size='small'>>=
 methods(class = 'swmpr')
 @
-\texttt{swmpr} objects also inherit methods from the \texttt{data.frame} class
+These are functions that were written for, and work specifically, with \texttt{swmpr} objects \\~\\
+\texttt{swmpr} objects can also use methods from the basic data frame class, i.e., you can exit the SWMPr workflow at any time
 \end{frame}
 
 %%%%%%
 \begin{frame}[fragile,t]{How are data \Bigtxt{organized}?}
-Data organization depends on the analysis needs - it is neither fun nor straightforward (common opinion, not mine) \\~\\
-What are some challenges?\\~\\
+Data organization depends on the analysis needs - it is usually tedious \\~\\
+Example: Filter by QAQC flags\\~\\
 \begin{itemize}
-\item Imported data have QAQC columns
-\item Extra columns/rows
-\item Maybe we don't care about all the parameters
-\item Data from separate sites are in separate objects \\~\\
+\item Remove observations with a specified QAQC flag value
+\item Remove QAQC columns: \href{http://cdmo.baruch.sc.edu/data/qaqc.cfm}{Link} to QAQC codes \\~\\
 \end{itemize}
-The \Bigtxt{organize} functions are specific to the SWMP data but many of the principles apply to generic time series
+\centerline{\fbox{\includegraphics[width = 0.8\textwidth]{fig/qaqc_flags.png}}}
 \end{frame}
 
 %%%%%%
-\begin{frame}[fragile]{How are data \Bigtxt{organized}?}
-A relevant example - we want to compare time series from different sites\\~\\
-\begin{itemize}
-\item Data may have arbitrary time steps that do not match between sites \\~\\
-\item Date ranges may also differ \\~\\
-\end{itemize}
-The \texttt{setstep} and \texttt{comb} functions address these issues! \\~\\
-<<>>=
-met <- import_remote('apaebmet')
-wq <- import_remote('apacpwq')
-dat <- comb(met, wq) # tada!
+\begin{frame}[containsverbatim,shrink]{Retrieve SWMP data}
+Raw data with QAQC columns
+<<size = 'small', echo = FALSE>>=
+# View the first six rows of the met data
+data(apacpwq)
+head(apacpwq, 3)
 @
 \end{frame}
 
 %%%%%%
-\begin{frame}{How are data \Bigtxt{organized}?}
-The \texttt{setstep} function is used within \texttt{comb} to standardize the time steps for each input object \\~\\
-A tricky problem - actual observations which may occur on an arbitrary step must be matched to a set time step\\~\\
-This function uses `fast-ordered joins' from the \href{http://cran.r-project.org/web/packages/data.table/index.html}{data.table} package using the `nearest' method\\~\\
-Also must define a threshold for matching: +/- some buffer of allowance beyond which matches are discarded \\~\\
+\begin{frame}[containsverbatim]{Organize SWMP data}
+Data in red are `bad' QAQC flags
+<<qaqc_ex1, fig.height = 2.5, fig.width = 8, out.width = '0.9\\textwidth', results = 'hold', echo = F>>=
+# select values that did not pass qaqc
+dat <- apacpwq
+var <- 'temp'
+nopass <- grep('0', dat[, paste0('f_', var)], invert = T)
+nopass <- dat[nopass, ]
+
+# plot
+par(mar = c(4, 4, 1, 0.5))
+plot(dat$datetimestamp, dat[, var], xlab = 'Date', ylab = var, type = 'l', ylim = c(10, 50))
+
+# add  points that did not pass qaqc
+points(nopass$datetimestamp, nopass[, var], col = 'red')
+@
+After using \texttt{qaqc} function
+<<qaqc_ex2, fig.height = 2.5, fig.width = 8, results = 'hold', echo = F, out.width = '0.9\\textwidth',>>=
+# run qaqc
+dat <- qaqc(apacpwq)
+
+# plot
+par(mar = c(4, 4, 1, 0.5))
+plot(dat$datetimestamp, dat[, var], xlab = 'Date', ylim = c(10, 50), ylab = var, type = 'l')
+@
 \end{frame}
 
 %%%%%%
-\begin{frame}{How are data \Bigtxt{organized}?}
-Mechanistically, \texttt{setstep} does the following for each data object: \\~\\
+\begin{frame}[fragile]{How are data \Bigtxt{organized}?}
+Example - we want to compare time series from different sites\\~\\
 \begin{itemize}
-\item Creates a continuous `master' time series at defined step using first/last time stamps
-\item Matches existing observations to standardized using `nearest' join method
-\item Calculates difference in time between matched and standardized step, discards those beyond threshold \\~\\
+\item Data may have arbitrary time steps that do not match between sites \\~\\
+\item Date ranges may also differ \\~\\
 \end{itemize}
-Data objects, now standarized, are then combined by absolute matching of time steps, again using \href{http://cran.r-project.org/web/packages/data.table/index.html}{data.table}
+The \texttt{comb} function addresses these issues! \\~\\
+<<>>=
+# import all weather and wq data for Apalachicola
+met <- import_remote('apaebmet')
+wq <- import_remote('apacpwq')
+@
 \end{frame}
 
 %%%%%%
@@ -391,17 +368,16 @@ Data objects, now standarized, are then combined by absolute matching of time st
 dim(met)
 dim(wq)
 # standardize time step to two hours
-# maximum difference for matching 30 minutes
 # combine only overlapping time ranges
-dat <- comb(wq, met, timestep = 120, differ = 30, 
-  method = 'intersect')
+dat <- comb(wq, met, timestep = 120, method = 'intersect')
 dim(dat)
 @
 \end{frame}
 
 %%%%%%
 \begin{frame}[fragile]{How are data \Bigtxt{organized}?}
-<<size = 'small'>>=
+The combined dataset
+<<size = 'small', echo = F>>=
 head(dat, 4)
 @
 \end{frame}
@@ -410,36 +386,34 @@ head(dat, 4)
 \begin{frame}{How are data \Bigtxt{analyzed}?}
 Time series analysis can range from very general to very specific \\~\\
 SWMPr functions include...\\~\\
-\begin{columns}
+\begin{columns}[t]
 \begin{column}{0.45\textwidth}
 \Bigtxt{General} \\~\\
 \begin{itemize}
-\item \texttt{na.approx}
-\item \texttt{smoother}
-\item \texttt{aggreswmp}
-\item \texttt{plot}
-\item \texttt{hist}
-\item \texttt{lines}
+\item Approximate missing data
+\item Smoothing with moving windows
+\item Aggregate by time periods
+\item Basic plots and histograms
 \end{itemize}
 \end{column}
 \begin{column}{0.45\textwidth}
 \Bigtxt{Specific} \\~\\
 \begin{itemize}
-\item \texttt{decomp}
-\item \texttt{decomp\_cj}
-\item \texttt{ecometab}
-\item \texttt{aggremetab}
-\item \texttt{plot\_metab}
-\item \texttt{plot\_summary}
+\item Time series decomposition
+\item Estimate net ecosystem metabolism
+\item Aggregate metabolism
+\item Summary plots of raw data
 \end{itemize}
 \end{column}
 \end{columns}
+\vspace{0.3in}
+...or exit the SWMPr workflow and evaluate with other R packages
 \end{frame}
 
-%%%%%%
-\begin{frame}[fragile,t]{How are data \Bigtxt{analyzed}?}
-Some examples... fill missing data with \texttt{na.approx}
-<<'/filled', fig.width = 7, fig.height = 2, size = 'scriptsize', par = T, out.width = '0.9\\textwidth'>>=
+%%%%%
+\begin{frame}[fragile]{How are data \Bigtxt{analyzed}?}
+Example: fill missing data \\~\\
+<<'/filled', fig.width = 8, fig.height = 2, size = 'scriptsize', par = T, , echo = F, out.width = '0.85\\textwidth'>>=
 # import, organize
 data(apadbwq)
 dat <- qaqc(apadbwq)
@@ -448,15 +422,11 @@ dat <- subset(dat, select = 'do_mgl',
   )
 
 # interpolate, plot
-filled <- na.approx(dat, params = 'do_mgl', maxgap = 10)
+filled <- na.approx(dat, params = 'do_mgl', maxgap =100)
 plot(filled, col = 'red'); lines(dat, lwd = 2)
 @
-\end{frame}
-
-%%%%%%
-\begin{frame}[fragile,t]{How are data \Bigtxt{analyzed}?}
-Some examples... smooth data with \texttt{smoother}
-<<'/smooth', fig.width = 7, fig.height = 2, size = 'scriptsize', par = T, out.width = '0.9\\textwidth'>>=
+Example: smooth data \\~\\
+<<'/smooth', fig.width = 8, fig.height = 2, size = 'scriptsize', par = T, echo = F, out.width = '0.85\\textwidth'>>=
 # import, organize
 data(apadbwq)
 dat <- qaqc(apadbwq)
@@ -471,18 +441,11 @@ plot(dat); lines(dat_smooth, col = 'red', lwd = 2)
 \end{frame}
 
 %%%%%%
-\begin{frame}[fragile,t]{How are data \Bigtxt{analyzed}?}
-Some examples... additive decomposition with \texttt{decomp\_cj}
-<<'decomp_dep', echo = T, eval = F, size = 'tiny'>>=
+\begin{frame}[fragile]{How are data \Bigtxt{analyzed}?}
+Example: time series decomposition (chl-a at cbmocnut)\\~\\
+<<'decomp_dep', eval = T, echo = F, fig.height = 5, fig.width = 8, out.width = '0.85\\textwidth'>>=
 # import, organize
-dat <- import_remote('cbmocnut')
-dat$chla_n <- log(dat$chla_n)
 
-# additive decompision of chl, annual
-decomp_cj(dat, 'chla_n', type = 'add')
-@
-<<'/decomped', fig.width = 8, fig.height = 4, out.width = '0.85\\textwidth', echo = F>>=
-# import, organize
 dat <- import_remote('cbmocnut')
 dat <- subset(dat, select = 'chla_n')
 dat$chla_n <- log(dat$chla_n)
@@ -495,74 +458,97 @@ out
 \end{frame}
 
 %%%%%%
-\begin{frame}[fragile,t]{How are data \Bigtxt{analyzed}?}
-Some examples... estimate metabolism with \texttt{ecometab}
-<<'ecometab_dep', echo = T, eval = F, size = 'scriptsize', cache = T>>=
+\begin{frame}[fragile]{How are data \Bigtxt{analyzed}?}
+Example: estimate ecosystem metabolism
+<<'/ecometab_dep', echo = F, cache = T>>=
 ## import water quality and weather data, combine
-wq <- import_remote('apebbwq')
-met <- import_remote('apaebmet')
-dat <- comb(wq, met)
-
-## metabolism, plot
-res <- ecometab(dat, metab_units = 'grams')
-plot_metab(res, by = 'months') 
-@
-<<'/ecometab', fig.width = 8, fig.height = 2.5, out.width = '0.95\\textwidth', echo = F, cache = T>>=
 wq <- import_remote('apadbwq')
 met <- import_remote('apaebmet')
 dat <- comb(wq, met)
-
-## metaobolism, plot
 res <- ecometab(dat, metab_units = 'grams')
-out <- plot_metab(res, by = 'months') 
-out <- out + theme_mine()
-out
+@
+<<'/ecometab1', fig.width = 8, fig.height = 2.5, out.width = '0.95\\textwidth', echo = F>>=
+plot_metab(res, by = 'months') + theme_mine() + scale_y_continuous('Monthly', limits = c(-10, 10)) + theme(axis.title.x = element_blank())
+@
+<<'/ecometab2', fig.width = 8, fig.height = 2.5, out.width = '0.95\\textwidth', echo = F>>=
+plot_metab(res, by = 'quarters') + theme_mine() + scale_y_continuous('Quarterly', limits = c(-10, 10)) + theme(axis.title.x = element_blank())
 @
 \end{frame}
 
 \section{SWMPr applications}
 
 %%%%%%
+\begin{frame}[fragile]{SWMPr applications}
+The most common question - what is the change over time at my site? \\~\\
+The functions in SWMPr can help, but it's easier to interact!\\~\\
+Two online applications can help visualize trends \\~\\
+\begin{columns}[t]
+\begin{column}{0.45\textwidth}
+\centerline{\Bigtxt{\href{https://beckmw.shinyapps.io/swmp_summary}{Summary plots}}}
+\centerline{\fbox{\includegraphics[width = 0.9\textwidth]{fig/swmp_summary.png}}}
+\end{column}
+\begin{column}{0.45\textwidth}
+\centerline{\Bigtxt{\href{https://beckmw.shinyapps.io/swmp_comp}{Trends map}}}
+\centerline{\fbox{\includegraphics[width = 0.935\textwidth]{fig/swmp_comp.png}}}
+\end{column}
+\end{columns}
+\end{frame}
+
+%%%%%%
+\begin{frame}[t]{SWMPr applications}
+\href{https://swmprats.net}{SWMPrats.net}: \Bigtxt{S}ystem-\Bigtxt{W}ide \Bigtxt{M}onitoring \Bigtxt{P}rogram \Bigtxt{R}esources for the \Bigtxt{A}nalysis of \Bigtxt{T}ime \Bigtxt{S}eries \\~\\
+\centerline{\fbox{\includegraphics[width = 0.75\textwidth]{fig/swmprats_home.png}}}
+\end{frame}
+
+%%%%%%
 \begin{frame}{SWMPr applications}
-The most common question - has there been a change over time at my site? \\~\\
-The functions in the package can help answer this very general question...\\~\\
-...but it's often easier to interactively evaluate the data! \\~\\
-Two shiny applications, hosted on \href{http://www.shinyapps.io/}{shinyapps.io}, allow users to visualize trends in SWMP data \\~\\
-These apps were created with SWMPr functions or use them `reactively'
-\end{frame}
-
-%%%%%%
-\begin{frame}[t]{SWMPr applications}
-SWMP summary plots: \href{https://beckmw.shinyapps.io/swmp_summary/}{https://beckmw.shinyapps.io/swmp\_summary/}\\~\\
-\centerline{\includegraphics[width = 0.7\textwidth]{fig/swmp_summary.png}}
-\end{frame}
-
-%%%%%%
-\begin{frame}[t]{SWMPr applications}
-SWMP trends map: \href{https://beckmw.shinyapps.io/swmp_comp/}{https://beckmw.shinyapps.io/swmp\_comp/}\\~\\
-\centerline{\includegraphics[width = 0.7\textwidth]{fig/swmp_comp.png}}
-\end{frame}
-
-\section{Conclusions}
-
-%%%%%%
-\begin{frame}{Conclusions}
 The SWMPr package provides an R-centric approach to \Bigtxt{retrieve}, \Bigtxt{organize}, and \Bigtxt{analyze} estuary data \\~\\
+A new program, but already seeing heavy use:\\~\\
+\begin{itemize}
+\item SWMPr downloaded 306 times from R network (as of April 30) \\~\\
+\item Apps have been used 347 hours (as of April 30) \\~\\
+\end{itemize}
 SWMPr is meant to \Bigtxt{augment}, not replace, existing data management programs (i.e., CDMO web services) \\~\\
-\Bigtxt{Benefits of the package}: deals with lots of the heavy lifting with large, unrefined datasets \\~\\
-\Bigtxt{Some points of concern}: do not use functions ad nauseum, always refer to help files and optional arguments\\~\\
-Just because you can do something doesn't mean you should!
+Deals with lots of the heavy lifting with large, unrefined datasets \\~\\
+\end{frame}
+
+\section{Novel applications}
+
+%%%%%%
+\begin{frame}{Novel applications}
+Similarities between... \\~\\
+\begin{columns}[t]
+\begin{column}{0.45\textwidth}
+\Bigtxt{SWMP}\\~\\
+\begin{enumerate}
+\item Continuous wq and weather data
+\item Data from multiple sources - individual reserves
+\item Interested end users - NOAA, NERRS RCs/managers
+\end{enumerate}
+\end{column}
+\begin{column}{0.45\textwidth}
+\Bigtxt{Stream networks} \\~\\
+\begin{enumerate}
+\item Continuous pressure/temperature data
+\item Data from multiple sources - states/tribes
+\item Interested end users - EPA, states/tribes
+\end{enumerate}
+\end{column}
+\end{columns}
+\vspace{0.3in}
+The SWMPr approach is generic enough to be adapted to other applications...
 \end{frame}
 
 %%%%%%
-\begin{frame}{Conclusions}
-\centerline{\includegraphics[width = 0.8\textwidth]{fig/swmpr_logo.png}}
-\vspace{0.15in}
-Visit the development repo for the most recent version or to submit a bug report: \href{https://github.com/fawda123/SWMPr}{https://github.com/fawda123/SWMPr}\\~\\
-To get this presentation: \href{https://github.com/fawda123/swmpr_pres}{https://github.com/fawda123/ORD\_pres} \\~\\
-To learn more about NERRS: \href{http://www.nerrs.noaa.gov/}{http://www.nerrs.noaa.gov/} \\~\\
-To learn more about SWMP/CDMO: \href{http://cdmo.baruch.sc.edu/}{http://cdmo.baruch.sc.edu/}
-\end{frame}
+\begin{frame}{Novel applications}
+Some questions/comments... \\~\\
+\begin{itemize}
+\item Distinction between data management systems vs data analysis tools, not mutually exclusive but there are key differences \\~\\
+\item Data format and availability (STORET, WQX, WQP) \\~\\
+\item Desired products - data processing vs data analysis/viz \\~\\
+\item General questions to address - climate change...
+\end{itemize}
 
+\end{frame}
 
 \end{document}

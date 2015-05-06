@@ -1,24 +1,14 @@
-\frametitle{How are data \Bigtxt {analyzed}?}
-Some examples... additive decomposition with \texttt{decomp\_cj}
-\begin{knitrout}\tiny
-\definecolor{shadecolor}{rgb}{0.929, 0.973, 0.984}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{> }\hlcom{# import, organize}
-\hlstd{> }\hlstd{dat} \hlkwb{<-} \hlkwd{import_remote}\hlstd{(}\hlstr{'cbmocnut'}\hlstd{)}
-\hlstd{> }\hlstd{dat}\hlopt{$}\hlstd{chla_n} \hlkwb{<-} \hlkwd{log}\hlstd{(dat}\hlopt{$}\hlstd{chla_n)}
-\hlstd{> }
-\hlstd{> }\hlcom{# additive decompision of chl, annual}
-\hlstd{> }\hlkwd{decomp_cj}\hlstd{(dat,} \hlstr{'chla_n'}\hlstd{,} \hlkwc{type} \hlstd{=} \hlstr{'add'}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.929, 0.973, 0.984}\color{fgcolor}
-
-{\centering \includegraphics[width=0.85\textwidth]{fig//decomped-1}
-
-}
-
-
-
-\end{knitrout}
+\frametitle{SWMPr applications}
+The most common question - what is the change over time at my site? \\~\\
+The functions in SWMPr can help, but it's easier to interact!\\~\\
+Two online applications can help visualize trends \\~\\
+\begin{columns}[t]
+\begin{column}{0.45\textwidth}
+\centerline{\Bigtxt{\href{https://beckmw.shinyapps.io/swmp_summary}{Summary plots}}}
+\centerline{\fbox{\includegraphics[width = 0.9\textwidth]{fig/swmp_summary.png}}}
+\end{column}
+\begin{column}{0.45\textwidth}
+\centerline{\Bigtxt{\href{https://beckmw.shinyapps.io/swmp_comp}{Trends map}}}
+\centerline{\fbox{\includegraphics[width = 0.935\textwidth]{fig/swmp_comp.png}}}
+\end{column}
+\end{columns}
