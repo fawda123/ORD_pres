@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  6 MAY 2015 15:59
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.8.29)  7 MAY 2015 09:10
 entering extended mode
 **ORD_pres.tex
 (M:\presentations\ORD_pres\ORD_pres.tex
@@ -1469,7 +1469,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 File: fig/swmpr_logo.png Graphic file (type png)
  <use fig/swmpr_logo.png>
 Package pdftex.def Info: fig/swmpr_logo.png used on input line 106.
-(pdftex.def)             Requested size: 290.9531pt x 92.38309pt.
+(pdftex.def)             Requested size: 308.06367pt x 97.81325pt.
 
 <fig/back_tmp.pdf, id=48, 505.89pt x 505.89pt>
 File: fig/back_tmp.pdf Graphic file (type pdf)
@@ -1513,62 +1513,55 @@ Package pdftex.def Info: fig/back_tmp.pdf used on input line 134.
  [4
 
  <M:/presentations/ORD_pres/fig/NERRS_locations.png>]
-File: fig/back_tmp.pdf Graphic file (type pdf)
- <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 154.
-(pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [5
-
-]
-<fig/cdmo_front.png, id=199, 730.22812pt x 406.51875pt>
+<fig/cdmo_front.png, id=173, 730.22812pt x 406.51875pt>
 File: fig/cdmo_front.png Graphic file (type png)
 
 <use fig/cdmo_front.png>
-Package pdftex.def Info: fig/cdmo_front.png used on input line 160.
+Package pdftex.def Info: fig/cdmo_front.png used on input line 140.
 (pdftex.def)             Requested size: 342.2953pt x 190.55519pt.
 File: fig/back_tmp.pdf Graphic file (type pdf)
  <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 160.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 140.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [6
+ [5
 
  <M:/presentations/ORD_pres/fig/cdmo_front.png>]
 File: fig/back_tmp.pdf Graphic file (type pdf)
  <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 171.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 152.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [7
+ [6
 
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 178.
+LaTeX Font Info:    Try loading font information for U+msa on input line 159.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 178.
+LaTeX Font Info:    Try loading font information for U+msb on input line 159.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<fig/qaqc_ex.png, id=253, 630.10406pt x 304.13625pt>
+<fig/qaqc_ex.png, id=226, 630.10406pt x 304.13625pt>
 File: fig/qaqc_ex.png Graphic file (type png)
  <use fig/qaqc_ex.png>
-Package pdftex.def Info: fig/qaqc_ex.png used on input line 178.
+Package pdftex.def Info: fig/qaqc_ex.png used on input line 159.
 (pdftex.def)             Requested size: 308.06367pt x 148.69392pt.
 File: fig/back_tmp.pdf Graphic file (type pdf)
 
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 178.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 159.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [8
+ [7
 
  <M:/presentations/ORD_pres/fig/qaqc_ex.png>]
 File: fig/back_tmp.pdf Graphic file (type pdf)
 
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 192.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 172.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [9
+ [8
 
 ] (M:\presentations\ORD_pres\ORD_pres.vrb
 File: fig/swmpr_logo.png Graphic file (type png)
@@ -1581,31 +1574,31 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10.95> not available
 )
 File: fig/back_tmp.pdf Graphic file (type pdf)
  <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 210.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 190.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [10
+ [9
 
 ]
 (M:\presentations\ORD_pres\ORD_pres.vrb
-<fig/swmpr_manual.png, id=334, 596.2275pt x 532.23843pt>
+<fig/swmpr_manual.png, id=308, 596.2275pt x 532.23843pt>
 File: fig/swmpr_manual.png Graphic file (type png)
 
 <use fig/swmpr_manual.png>
 Package pdftex.def Info: fig/swmpr_manual.png used on input line 2.
 (pdftex.def)             Requested size: 256.72147pt x 229.16667pt.
 )
-Overfull \vbox (0.22519pt too high) detected at line 215
+Overfull \vbox (0.22519pt too high) detected at line 195
  []
 
 File: fig/back_tmp.pdf Graphic file (type pdf)
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 215.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 195.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [11
+ [10
 
  <M:/presentations/ORD_pres/fig/swmpr_manual.png>]
 (M:\presentations\ORD_pres\ORD_pres.vrb
-<fig/help_ex.png, id=361, 599.99156pt x 492.33937pt>
+<fig/help_ex.png, id=335, 599.99156pt x 492.33937pt>
 File: fig/help_ex.png Graphic file (type png)
  <use fig/help_ex.png>
 Package pdftex.def Info: fig/help_ex.png used on input line 2.
@@ -1614,23 +1607,23 @@ Package pdftex.def Info: fig/help_ex.png used on input line 2.
 File: fig/back_tmp.pdf Graphic file (type pdf)
 
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 220.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 200.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [12
+ [11
 
  <M:/presentations/ORD_pres/fig/help_ex.png>]
-Overfull \hbox (2.9571pt too wide) in paragraph at lines 260--260
+Overfull \hbox (2.9571pt too wide) in paragraph at lines 240--240
  [] 
  []
 
 File: fig/back_tmp.pdf Graphic file (type pdf)
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 260.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 240.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [13
+ [12
 
 ] (M:\presentations\ORD_pres\ORD_pres.vrb
-<fig/searches.png, id=417, 419.31656pt x 308.65312pt>
+<fig/searches.png, id=390, 419.31656pt x 308.65312pt>
 File: fig/searches.png Graphic file (type png)
  <use fig/searches.png>
 Package pdftex.def Info: fig/searches.png used on input line 10.
@@ -1639,17 +1632,17 @@ Package pdftex.def Info: fig/searches.png used on input line 10.
 File: fig/back_tmp.pdf Graphic file (type pdf)
 
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 273.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 253.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [14
+ [13
 
  <M:/presentations/ORD_pres/fig/searches.png>]
 File: fig/back_tmp.pdf Graphic file (type pdf)
 
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 284.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 265.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [15
+ [14
 
 ] (M:\presentations\ORD_pres\ORD_pres.vrb
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
@@ -1657,24 +1650,24 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 )
 
 Class beamer Warning: Frame text is shrunk by a factor of 7.71637 percent inste
-ad of 0 percent on input line 317.
+ad of 0 percent on input line 298.
 
 File: fig/back_tmp.pdf Graphic file (type pdf)
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 317.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 298.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [16
+ [15
 
 ] (M:\presentations\ORD_pres\ORD_pres.vrb)
 File: fig/back_tmp.pdf Graphic file (type pdf)
 
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 339.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 320.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [17
+ [16
 
 ] (M:\presentations\ORD_pres\ORD_pres.vrb
-<fig/qaqc_flags.png, id=525, 488.57532pt x 147.55125pt>
+<fig/qaqc_flags.png, id=499, 488.57532pt x 147.55125pt>
 File: fig/qaqc_flags.png Graphic file (type png)
 
 <use fig/qaqc_flags.png>
@@ -1683,42 +1676,50 @@ Package pdftex.def Info: fig/qaqc_flags.png used on input line 8.
 )
 File: fig/back_tmp.pdf Graphic file (type pdf)
  <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 350.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 331.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [18
+ [17
 
  <M:/presentations/ORD_pres/fig/qaqc_flags.png>]
 File: fig/back_tmp.pdf Graphic file (type pdf)
  <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 377.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 358.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [19
+ [18
 
 ]
-<fig/qaqc_ex1-1.pdf, id=579, 578.16pt x 180.675pt>
+<fig/qaqc_ex1-1.pdf, id=552, 578.16pt x 180.675pt>
 File: fig/qaqc_ex1-1.pdf Graphic file (type pdf)
  <use fig/qaqc_ex1-1.pdf>
-Package pdftex.def Info: fig/qaqc_ex1-1.pdf used on input line 385.
+Package pdftex.def Info: fig/qaqc_ex1-1.pdf used on input line 366.
 (pdftex.def)             Requested size: 308.06367pt x 96.27007pt.
 
-<fig/qaqc_ex2-1.pdf, id=580, 578.16pt x 180.675pt>
+<fig/qaqc_ex2-1.pdf, id=553, 578.16pt x 180.675pt>
 File: fig/qaqc_ex2-1.pdf Graphic file (type pdf)
  <use fig/qaqc_ex2-1.pdf>
-Package pdftex.def Info: fig/qaqc_ex2-1.pdf used on input line 396.
+Package pdftex.def Info: fig/qaqc_ex2-1.pdf used on input line 377.
 (pdftex.def)             Requested size: 308.06367pt x 96.27007pt.
 File: fig/back_tmp.pdf Graphic file (type pdf)
 
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 403.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 384.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [20
+ [19
 
  <M:/presentations/ORD_pres/fig/qaqc_ex1-1.pdf> <M:/presentations/ORD_pres/fig/
 qaqc_ex2-1.pdf>]
 (M:\presentations\ORD_pres\ORD_pres.vrb)
 File: fig/back_tmp.pdf Graphic file (type pdf)
  <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 422.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 403.
+(pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
+ [20
+
+]
+(M:\presentations\ORD_pres\ORD_pres.vrb)
+File: fig/back_tmp.pdf Graphic file (type pdf)
+ <use fig/back_tmp.pdf>
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 432.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
  [21
 
@@ -1726,34 +1727,26 @@ Package pdftex.def Info: fig/back_tmp.pdf used on input line 422.
 (M:\presentations\ORD_pres\ORD_pres.vrb)
 File: fig/back_tmp.pdf Graphic file (type pdf)
  <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 451.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 458.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
  [22
-
-]
-(M:\presentations\ORD_pres\ORD_pres.vrb)
-File: fig/back_tmp.pdf Graphic file (type pdf)
- <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 477.
-(pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [23
 
 ]
 File: fig/back_tmp.pdf Graphic file (type pdf)
 
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 505.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 486.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [24
+ [23
 
 ] (M:\presentations\ORD_pres\ORD_pres.vrb
-<fig//filled-1.pdf, id=722, 578.16pt x 144.54pt>
+<fig//filled-1.pdf, id=696, 578.16pt x 144.54pt>
 File: fig//filled-1.pdf Graphic file (type pdf)
  <use fig//filled-1.pdf>
 Package pdftex.def Info: fig//filled-1.pdf used on input line 6.
 (pdftex.def)             Requested size: 290.9531pt x 72.73737pt.
 
-<fig//smooth-1.pdf, id=723, 578.16pt x 144.54pt>
+<fig//smooth-1.pdf, id=697, 578.16pt x 144.54pt>
 File: fig//smooth-1.pdf Graphic file (type pdf)
  <use fig//smooth-1.pdf>
 Package pdftex.def Info: fig//smooth-1.pdf used on input line 17.
@@ -1762,14 +1755,14 @@ Package pdftex.def Info: fig//smooth-1.pdf used on input line 17.
 File: fig/back_tmp.pdf Graphic file (type pdf)
 
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 531.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 512.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [25
+ [24
 
  <M:/presentations/ORD_pres/fig//filled-1.pdf> <M:/presentations/ORD_pres/fig//
 smooth-1.pdf>]
 (M:\presentations\ORD_pres\ORD_pres.vrb
-<fig/decomp_dep-1.pdf, id=761, 578.16pt x 361.35pt>
+<fig/decomp_dep-1.pdf, id=734, 578.16pt x 361.35pt>
 File: fig/decomp_dep-1.pdf Graphic file (type pdf)
  <use fig/decomp_dep-1.pdf>
 Package pdftex.def Info: fig/decomp_dep-1.pdf used on input line 6.
@@ -1777,20 +1770,20 @@ Package pdftex.def Info: fig/decomp_dep-1.pdf used on input line 6.
 )
 File: fig/back_tmp.pdf Graphic file (type pdf)
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 546.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 527.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [26
+ [25
 
  <M:/presentations/ORD_pres/fig/decomp_dep-1.pdf>]
 (M:\presentations\ORD_pres\ORD_pres.vrb
-<fig//ecometab1-1.pdf, id=795, 578.16pt x 180.675pt>
+<fig//ecometab1-1.pdf, id=769, 578.16pt x 180.675pt>
 File: fig//ecometab1-1.pdf Graphic file (type pdf)
 
 <use fig//ecometab1-1.pdf>
 Package pdftex.def Info: fig//ecometab1-1.pdf used on input line 7.
 (pdftex.def)             Requested size: 325.17949pt x 101.6184pt.
 
-<fig//ecometab2-1.pdf, id=796, 578.16pt x 180.675pt>
+<fig//ecometab2-1.pdf, id=770, 578.16pt x 180.675pt>
 File: fig//ecometab2-1.pdf Graphic file (type pdf)
 
 <use fig//ecometab2-1.pdf>
@@ -1799,21 +1792,21 @@ Package pdftex.def Info: fig//ecometab2-1.pdf used on input line 17.
 )
 File: fig/back_tmp.pdf Graphic file (type pdf)
  <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 572.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 553.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [27
+ [26
 
  <M:/presentations/ORD_pres/fig//ecometab1-1.pdf> <M:/presentations/ORD_pres/fi
 g//ecometab2-1.pdf>]
 (M:\presentations\ORD_pres\ORD_pres.vrb
-<fig/swmp_summary.png, id=835, 938.75719pt x 697.10437pt>
+<fig/swmp_summary.png, id=809, 938.75719pt x 697.10437pt>
 File: fig/swmp_summary.png Graphic file (type png)
 
 <use fig/swmp_summary.png>
 Package pdftex.def Info: fig/swmp_summary.png used on input line 8.
 (pdftex.def)             Requested size: 138.6277pt x 102.93369pt.
 
-<fig/swmp_comp.png, id=837, 941.76843pt x 672.26157pt>
+<fig/swmp_comp.png, id=811, 941.76843pt x 672.26157pt>
 File: fig/swmp_comp.png Graphic file (type png)
  <use fig/swmp_comp.png>
 Package pdftex.def Info: fig/swmp_comp.png used on input line 12.
@@ -1821,56 +1814,56 @@ Package pdftex.def Info: fig/swmp_comp.png used on input line 12.
 )
 File: fig/back_tmp.pdf Graphic file (type pdf)
 <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 591.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 572.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [28
+ [27
 
  <M:/presentations/ORD_pres/fig/swmp_summary.png> <M:/presentations/ORD_pres/fi
 g/swmp_comp.png>]
-<fig/swmprats_home.png, id=867, 719.68875pt x 442.65375pt>
+<fig/swmprats_home.png, id=841, 719.68875pt x 442.65375pt>
 File: fig/swmprats_home.png Graphic file (type png)
 
 <use fig/swmprats_home.png>
-Package pdftex.def Info: fig/swmprats_home.png used on input line 597.
+Package pdftex.def Info: fig/swmprats_home.png used on input line 578.
 (pdftex.def)             Requested size: 256.72147pt x 157.90303pt.
 File: fig/back_tmp.pdf Graphic file (type pdf)
  <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 597.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 578.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [29
+ [28
 
  <M:/presentations/ORD_pres/fig/swmprats_home.png>]
 File: fig/back_tmp.pdf Graphic file (type pdf)
  <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 609.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 590.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
- [30
+ [29
 
 ]
 File: fig/back_tmp.pdf Graphic file (type pdf)
  <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 636.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 617.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
 
-[31
+[30
 
 ]
 File: fig/back_tmp.pdf Graphic file (type pdf)
  <use fig/back_tmp.pdf>
-Package pdftex.def Info: fig/back_tmp.pdf used on input line 648.
+Package pdftex.def Info: fig/back_tmp.pdf used on input line 629.
 (pdftex.def)             Requested size: 364.20192pt x 273.15337pt.
-Package atenddvi Info: Last page = 32.
- [32
+Package atenddvi Info: Last page = 31.
+ [31
 
 ]
 \tf@nav=\write6
 \tf@toc=\write7
 \tf@snm=\write8
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 650.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 650.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 631.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 631.
  (M:\presentations\ORD_pres\ORD_pres.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 650.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 650.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 631.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 631.
 Package rerunfilecheck Info: File `ORD_pres.out' has not changed.
 (rerunfilecheck)             Checksum: CCB7A376CF4E1EDE9323CB1FE0057084;207.
 
@@ -1878,13 +1871,13 @@ Package rerunfilecheck Info: File `ORD_pres.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 650.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 631.
  ) 
 Here is how much of TeX's memory you used:
- 28317 strings out of 493921
- 560930 string characters out of 3147282
+ 28312 strings out of 493921
+ 560877 string characters out of 3147282
  676620 words of memory out of 3000000
- 30864 multiletter control sequences out of 15000+200000
+ 30861 multiletter control sequences out of 15000+200000
  10591 words of font info for 41 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  49i,16n,73p,470b,840s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1897,9 +1890,9 @@ ype1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt1
 0.pfb>
-Output written on ORD_pres.pdf (32 pages, 4135894 bytes).
+Output written on ORD_pres.pdf (31 pages, 4128914 bytes).
 PDF statistics:
- 1016 PDF objects out of 1200 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
+ 990 PDF objects out of 1000 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
  278 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -92,7 +92,7 @@
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 \begin{document}
 
-\title[SWMPr for estuarine time series]{\includegraphics[width=0.85\textwidth]{fig/swmpr_logo.png}}
+\title[SWMPr for estuarine time series]{\includegraphics[width=0.9\textwidth]{fig/swmpr_logo.png}}
 
 \author[M. Beck]{Marcus W. Beck}
 
@@ -134,26 +134,6 @@ System Wide Monitoring Program, initiated in 1995 to provide \Bigtxt{continuous 
 \end{frame}
 
 %%%%%%
-\begin{frame}{What is NERRS/SWMP?}
-Each reserve has fixed, continuous monitoring stations for \Bigtxt{water quality} (15 min), \Bigtxt{meteorology} (15 min), and \Bigtxt{nutrients} (monthly)\\~\\
-The parameters for a station are specific to the parameter type \\~\\
-\begin{columns}[t]
-\begin{column}{0.3\textwidth}
-\Bigtxt{Water quality} \\~\\
-temp, spcond, sal, do\_pct, do\_mgl, depth, cdepth, level, clevel, ph, turb, chlfluor
-\end{column}
-\begin{column}{0.3\textwidth}
-\Bigtxt{Meteorology} \\~\\
-atemp, rh, bp, wspd, maxwspd, wdir, sdwdir, totpar, totprcp, cumprcp, totsorad \\~\\
-\end{column}
-\begin{column}{0.3\textwidth}
-\Bigtxt{Nutrients} \\~\\
-po4f, chla\_n, no3f, no2f, nh4f, no23f, ke\_n, urea
-\end{column}
-\end{columns}
-\end{frame}
-
-%%%%%%
 \begin{frame}[t]{What is NERRS/SWMP?}
 Data maintained by the Centralized Data Management Office (\href{http://cdmo.baruch.sc.edu/}{CDMO})\\~\\
 \centerline{\includegraphics[width = \textwidth]{fig/cdmo_front.png}}
@@ -161,11 +141,12 @@ Data maintained by the Centralized Data Management Office (\href{http://cdmo.bar
 
 %%%%%%
 \begin{frame}{What is NERRS/SWMP?}
-CDMO is an existing data management infrastructure for SWMP, services include:\\~\\
+Each reserve has fixed, continuous monitoring stations for \Bigtxt{water quality} (15 min), \Bigtxt{meteorology} (15 min), and \Bigtxt{nutrients} (monthly)\\~\\
+CDMO is an existing data management infrastructure for SWMP:\\~\\
 \begin{itemize}
 \item Automated QAQC \\~\\
 \item Numerous data download options \\~\\
-\item Web services/API for remote data retrieval \\~\\
+\item Web services/API for remote data upload/retrieval \\~\\
 \item Simple viz tools \\~\\
 \end{itemize}
 \end{frame}
@@ -179,11 +160,10 @@ Raw data will look like this...\\~\\
 
 %%%%%%
 \begin{frame}{What is the problem?}
-An invaluable data source but no recent comparative analyses between systems \\~\\
-NERRS researchers, managers, and technicians need more tools for trend analysis \\~\\
+An invaluable data source but no recent comparative analyses, need for tools for simple trend analysis \\~\\
 Some specific issues:\\~\\
 \begin{itemize}
-\item Knowing what data to use and how to obtain
+\item Getting the data into an analysis program
 \item Dealing with QAQC columns or removing `bad' observations
 \item Combining data for comparison
 \item Issues inherent with time series, e.g., signal vs. noise, data quantity
@@ -197,7 +177,7 @@ Some specific issues:\\~\\
 \begin{frame}[fragile]{What is the (potential) solution?}
 \centerline{\includegraphics[width = 0.8\textwidth]{fig/swmpr_logo.png}}
 \vspace{0.15in}
-SWMPr v2.0.0 is officially released!
+An R package for SwMP data, SWMPr v2.0.0 is officially released!
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.929, 0.973, 0.984}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -280,7 +260,8 @@ SWMPr functions can be used to import data into R three ways\\~\\
 \item Retrieve SWMP data from a \href{https://s3.amazonaws.com/swmpalldata/}{third-party server} \\~\\
 \item Call the existing CDMO \href{http://cdmo.baruch.sc.edu/webservices.cfm}{web services} to import directly\\~\\
 \end{enumerate}
-Multiple options to accommodate different types of users
+Multiple options to accommodate different types of users \\~\\
+Bridges the gap from CDMO to analysis software
 \end{frame}
 
 %%%%%%
@@ -404,7 +385,7 @@ After using \texttt{qaqc} function
 
 %%%%%%
 \begin{frame}[fragile]{How are data \Bigtxt{organized}?}
-Example - we want to compare time series from different sites\\~\\
+Example: Combine data to compare time series from different sites\\~\\
 \begin{itemize}
 \item Data may have arbitrary time steps that do not match between sites \\~\\
 \item Date ranges may also differ \\~\\
@@ -601,11 +582,11 @@ Two online applications can help visualize trends \\~\\
 The SWMPr package provides an R-centric approach to \Bigtxt{retrieve}, \Bigtxt{organize}, and \Bigtxt{analyze} estuary data \\~\\
 A new program, but already seeing heavy use:\\~\\
 \begin{itemize}
-\item SWMPr downloaded 306 times from R network (as of April 30) \\~\\
-\item Apps have been used 347 hours (as of April 30) \\~\\
+\item SWMPr downloaded 359 times from R network (as of May 7) \\~\\
+\item Apps used 347 hours in April \\~\\
 \end{itemize}
 SWMPr is meant to \Bigtxt{augment}, not replace, existing data management programs (i.e., CDMO web services) \\~\\
-Deals with lots of the heavy lifting with large, unrefined datasets \\~\\
+Deals with lots of the heavy lifting with large, unrefined datasets - greatly improves accessibility for analysis \\~\\
 \end{frame}
 
 \section{Novel applications}
@@ -639,10 +620,10 @@ The SWMPr approach is generic enough to be adapted to other applications...
 \begin{frame}{Novel applications}
 Some questions/comments... \\~\\
 \begin{itemize}
-\item Distinction between data management systems vs data analysis tools, not mutually exclusive but there are key differences \\~\\
 \item Data format and availability (STORET, WQX, WQP) \\~\\
 \item Desired products - data processing vs data analysis/viz \\~\\
-\item General questions to address - climate change...
+\item General questions to address - climate change... \\~\\
+\item Distinction between data management systems vs data analysis tools, not mutually exclusive but there are key differences
 \end{itemize}
 
 \end{frame}
