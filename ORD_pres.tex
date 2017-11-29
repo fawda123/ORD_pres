@@ -21,6 +21,7 @@
 \newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
 \newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
 \newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
 
 \usepackage{framed}
 \makeatletter
@@ -108,16 +109,6 @@
 \section{Background}
 
 %%%%%%
-\begin{frame}{Overview}
-\begin{itemize}
-\item What is NERRS/SWMP and motivation for creating the package \\~\\
-\item What can SWMPr do \\~\\
-\item What has SWMPr done \\~\\
-\item How I can help, questions for the group
-\end{itemize}
-\end{frame}
-
-%%%%%%
 \begin{frame}{What is NERRS/SWMP?}{}
 {\bf NERRS}\\
 National Estuarine Research Reserve System, established by Coastal Zone Management Act of 1972. Focus on \Bigtxt{long-term research}, \Bigtxt{monitoring}, \Bigtxt{education}, and \Bigtxt{stewardship} for more effective coastal management.\\~\\
@@ -177,7 +168,7 @@ Some specific issues:\\~\\
 \begin{frame}[fragile]{What is the (potential) solution?}
 \centerline{\includegraphics[width = 0.8\textwidth]{fig/swmpr_logo.png}}
 \vspace{0.15in}
-An R package for SwMP data, SWMPr v2.0.0 is officially released!
+An R package for SWMP data, SWMPr v2.0.0 is officially released!
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.929, 0.973, 0.984}\color{fgcolor}\begin{kframe}
 \begin{alltt}
@@ -587,45 +578,6 @@ A new program, but already seeing heavy use:\\~\\
 \end{itemize}
 SWMPr is meant to \Bigtxt{augment}, not replace, existing data management programs (i.e., CDMO web services) \\~\\
 Deals with lots of the heavy lifting with large, unrefined datasets - greatly improves accessibility for analysis \\~\\
-\end{frame}
-
-\section{Novel applications}
-
-%%%%%%
-\begin{frame}{Novel applications}
-Similarities between... \\~\\
-\begin{columns}[t]
-\begin{column}{0.45\textwidth}
-\Bigtxt{SWMP}\\~\\
-\begin{enumerate}
-\item Continuous wq and weather data
-\item Data from multiple sources - individual reserves
-\item Interested end users - NOAA, NERRS RCs/managers
-\end{enumerate}
-\end{column}
-\begin{column}{0.45\textwidth}
-\Bigtxt{Stream networks} \\~\\
-\begin{enumerate}
-\item Continuous pressure/temperature data
-\item Data from multiple sources - states/tribes
-\item Interested end users - EPA, states/tribes
-\end{enumerate}
-\end{column}
-\end{columns}
-\vspace{0.3in}
-The SWMPr approach is generic enough to be adapted to other applications...
-\end{frame}
-
-%%%%%%
-\begin{frame}{Novel applications}
-Some questions/comments... \\~\\
-\begin{itemize}
-\item Data format and availability (STORET, WQX, WQP) \\~\\
-\item Desired products - data processing vs data analysis/viz \\~\\
-\item General questions to address - climate change... \\~\\
-\item Distinction between data management systems vs data analysis tools, not mutually exclusive but there are key differences
-\end{itemize}
-
 \end{frame}
 
 \end{document}
